@@ -2,7 +2,7 @@
 
 
 ### Статус проекта: даже не MVP:<
-![Progress](https://geps.dev)
+![](https://geps.dev/progress/1.2)
 
 ## 📂 Структура проекта
 ```python
