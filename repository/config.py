@@ -3,8 +3,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class RepositoryBase(BaseSettings):
     DB_HOST: str = "localhost"
     DB_PORT: int = 5432
-    DB_NAME: str = "postgres"
-    DB_USER: str = "postgres"
+    DB_NAME: str = "oms"
+    DB_USER: str = "reske"
     DB_PASSWORD: str = ""
     DB_DEBUG: bool = False
     DB_POOL_SIZE: int = 10
