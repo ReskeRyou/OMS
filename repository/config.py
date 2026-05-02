@@ -1,16 +1,17 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pathlib import Path
 
 class RepositoryBase(BaseSettings):
-    DB_HOST: str = "localhost"
+    DB_HOST: str = 'localhost'
     DB_PORT: int = 5432
-    DB_NAME: str = "oms"
-    DB_USER: str = "reske"
-    DB_PASSWORD: str = ""
+    DB_NAME: str = 'postgres'
+    DB_USER: str = 'postgres'
+    DB_PASSWORD: str = ''
     DB_DEBUG: bool = False
-    DB_POOL_SIZE: int = 10
+    DB_POOL_SIZE: int = 5
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=Path(__file__).parent.parent / '.env.development',
         env_file_encoding="utf-8",
         extra='ignore'
     )

@@ -1,6 +1,6 @@
 from dto.dependency import *
 
-class Product(PydanticBase):
+class ProductSchema(PydanticBase):
     id : int | None = None
     name : str = Field(max_length=20)
     price : float | None = None
