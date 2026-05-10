@@ -6,4 +6,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 class UserRepository(BaseRepository[UserModel, UserSchema]):
 
     def __init__(self, session: AsyncSession):
-        super().__init__(session, UserModel, UserSchema)
+        super().__init__(
+            session=session,
+            model=UserModel,
+            schema=UserSchema
+        )
